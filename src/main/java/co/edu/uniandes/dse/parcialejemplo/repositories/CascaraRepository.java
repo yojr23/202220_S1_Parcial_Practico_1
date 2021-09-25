@@ -1,4 +1,4 @@
-package co.edu.uniandes.dse.ZZZ.repositories;
+package co.edu.uniandes.dse.parcialejemplo.repositories;
 
 import org.springframework.stereotype.Repository;
 
