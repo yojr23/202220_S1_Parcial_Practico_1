@@ -32,9 +32,9 @@ Esta aplicación tiene el propósito de crear un sistema de información para un
 
 ## Punto 4 (10%). Pruebas de Postman
 
-(5%) Abra la consola de H2 e inserte varios registros en la tabla MEDICO_ENTITY.  
+(5%) Desde la consola de H2 e inserte varios registros en la tabla MEDICO_ENTITY. Guarde las instrucciones SQL en el archivo _sql/data.sql_ del proyecto.   
 
-Cree las siguiente prueba de integración en una colección
+(5%) Cree la siguiente prueba de integración en una colección y expórtela en la carpeta _collections_ del proyecto.
 
 ### Obtener todos los médicos
 
@@ -56,8 +56,6 @@ Response body:
 	"registroMedico": "DE7825",
 	"especialidad": "Medicina Interna"
 }]
-
-
 ```
 
 
