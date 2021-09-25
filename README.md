@@ -4,7 +4,7 @@
 
 1. Haga un fork de este repositorio
 2. Clone el repositorio bifurcado en su máquina virtual
-3. Abra el proyecto en Spring Tool
+3. Abra el proyecto en Spring Tools (o en el editor de su preferencia)
 4. Lea el enunciado completamente antes de iniciar
 
 ## Punto 1 (30%). Persistencia
@@ -32,37 +32,32 @@ Esta aplicación tiene el propósito de crear un sistema de información para un
 
 ## Punto 4 (10%). Pruebas de Postman
 
-(5%)  
+(5%) Abra la consola de H2 e inserte varios registros en la tabla MEDICO_ENTITY.  
 
-Cree las siguientes pruebas de integración en una colección
+Cree las siguiente prueba de integración en una colección
 
-### Creación correcta
+### Obtener todos los médicos
 
+Se espera un resultado semejante a este ejemplo:
 ```
-Method: POST
-URL: http://localhost:8080/s2_parcial1-api/api/medicos
-Body:
-{
+Method: GET
+URL: http://localhost:8080/api/medicos
+Response Status: 200
+Response body:
+[{
 	"nombre": "Juan Jose",
 	"apellido": "Rodríguez Ortiz"
 	"registroMedico": "FC3578K",
 	"especialidad": "Anestesiología"
-}
-Response: 200
-```
-
-### Creación incorrecta: apellido vacío o nulo
-
-```
-Method: POST
-URL: http://localhost:8080/s2_parcial1-api/api/medicos
-Body:
+},
 {
-	"nombre": "Juan Jose",
-	"apellido": "",
-	"registroMedico": "FC3578K",
-	"especialidad": "Anestesiología"
-}
-Response: 412
-"El médico tiene el apellido vacío o nulo"
+	"nombre": "María Paula",
+	"apellido": "Sarmiento Mancipe"
+	"registroMedico": "DE7825",
+	"especialidad": "Medicina Interna"
+}]
+
+
 ```
+
+
