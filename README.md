@@ -2,7 +2,7 @@
 
 ## Instrucciones
 
-1. Haga un fork de este repositorio
+1. Haga un _fork_ de este repositorio
 2. Clone el repositorio bifurcado en su máquina virtual
 3. Abra el proyecto en Spring Tools (o en el editor de su preferencia)
 4. Lea el enunciado completamente antes de iniciar
@@ -11,10 +11,9 @@
 
 Esta aplicación tiene el propósito de crear un sistema de información para un consultorio médico.
 
-(15%) Cree la entidad Medico en la carpeta correspondiente. Un Medico tiene un nombre, un apellido, un registro médico, una especilidad y un id de tipo _Long_ que representa su llave primaria.
+(15%) Cree la entidad _MedicoEntity_ en la carpeta correspondiente. Un médico tiene un nombre, un apellido, un registro médico, una especilidad y un id de tipo _Long_ que representa su llave primaria.
 
-(15%) Realice la implementación de la persistencia del Medico.
-
+(15%) Realice la implementación de la persistencia del médico.
 
 ## Punto 2 (40%). Lógica
 
