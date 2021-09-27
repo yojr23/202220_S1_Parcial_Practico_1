@@ -27,11 +27,11 @@ Esta aplicación tiene el propósito de crear un sistema de información para un
 
 (5%) Cree la clase _MedicoController_
 
-(10%) Implement el método _findAll_ para que llame al método de la lógica que obtiene todos los médicos, y retorna al usuario el listado de todos los médicos.
+(10%) Implemente el método _findAll_ para que llame al método de la lógica que obtiene todos los médicos, y retorna al usuario el listado de todos los médicos.
 
 ## Punto 4 (10%). Pruebas de Postman
 
-(5%) Desde la consola de H2 e inserte varios registros en la tabla MEDICO_ENTITY. Guarde las instrucciones SQL en el archivo _sql/data.sql_ del proyecto.   
+(5%) Desde la consola de H2 inserte varios registros en la tabla MEDICO_ENTITY. Guarde las instrucciones SQL en el archivo _sql/data.sql_ del proyecto.   
 
 (5%) Cree la siguiente prueba de integración en una colección y expórtela en la carpeta _collections_ del proyecto.
 
@@ -44,12 +44,14 @@ URL: http://localhost:8080/api/medicos
 Response Status: 200
 Response body:
 [{
+	"id": 1,
 	"nombre": "Juan Jose",
 	"apellido": "Rodríguez Ortiz"
 	"registroMedico": "FC3578K",
 	"especialidad": "Anestesiología"
 },
 {
+	"id": 2,
 	"nombre": "María Paula",
 	"apellido": "Sarmiento Mancipe"
 	"registroMedico": "DE7825",
