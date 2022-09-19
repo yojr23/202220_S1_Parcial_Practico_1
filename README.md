@@ -4,59 +4,33 @@
 
 1. Haga un _fork_ de este repositorio
 2. Clone el repositorio bifurcado en su máquina virtual
-3. Abra el proyecto en Spring Tools (o en el editor de su preferencia)
+3. Abra el proyecto en Visual Studio Code (o en el editor de su preferencia)
 4. Lea el enunciado completamente antes de iniciar
 
 ## Punto 1 (30%). Persistencia
 
-Esta aplicación tiene el propósito de crear un sistema de información para un consultorio médico.
+Esta aplicación tiene el propósito de crear un sistema de información para una clinica.
 
-(15%) Cree la entidad _MedicoEntity_ en la carpeta correspondiente. Un médico tiene un nombre, un apellido, un registro médico, una especilidad y un id de tipo _Long_ que representa su llave primaria.
+(10%) Cree la entidad _MedicoEntity_ en la carpeta correspondiente. Un médico tiene un nombre, un apellido, un registro médico y un id de tipo _Long_ que representa su llave primaria.
 
-(15%) Realice la implementación de la persistencia del médico.
+(10%) Cree la entidad _EspecialidadEntity_ en la carpeta correspondiente. Una especialidad tiene un nombre, una descripción y id de tipo _Long_ que representa su llave primaria.
 
-## Punto 2 (40%). Lógica
+Tenga en cuenta que un médico puede tener varias especialiades y que una especialidad puede ser ejercida por varios médicos.
 
-(20%) Usted debe crear la lógica de la aplicación; para esto implemente la clase correspondiente y el método _getMedicos_.
+(10%) Cree los repositorios para _MedicoEntity_ y _EspecialidadEntity_.
 
-(20%) Crear la prueba unitaria para el método _getMedicos_.
+## Punto 2 (30%). Lógica
 
-## Punto 3 (20%). API
+(10%) Cree la clase correspondiente para la lógica de médico. Implemente unicamente el método _createMedicos_. Valide que el registro médico inicie únicamente con los caracteres "RM" (e.g., RM1745).
 
-(5%) Cree la clase _MedicoDTO_ con los atributos correspondientes. 
+(10%) Cree la clase correspondiente para la lógica de especialidad. Implemente unicamente el método _createEspecialidad_. Valide que la descripción tenga como mínimo 10 caracteres.
 
-(5%) Cree la clase _MedicoController_
+(10%) Cree la clase correspondiente para la lógica de la asociación entre especialidad. Implemente unicamente el método _addEspecialidad_. Este método recibe como parámetro el id del médico, el id de la especidad y le agrega la especialidad al médico. Valide que tanto el médico como la especialidad existen.
 
-(10%) Implemente el método _findAll_ para que llame al método de la lógica que obtiene todos los médicos, y retorna al usuario el listado de todos los médicos.
+## Punto 2 (40%). Prueba de lógica
 
-## Punto 4 (10%). Pruebas de Postman
+(10%) Implemente las pruebas para el método _createMedicos_ del servicio de médico. Asegúrese de crear dos pruebas: una donde el médico se crea correctamente y otra donde se lanza una excepción de negocio por la violación de la regla de negocio.
 
-(5%) Desde la consola de H2 inserte varios registros en la tabla MEDICO_ENTITY. Guarde las instrucciones SQL en el archivo _sql/data.sql_ del proyecto.   
+(10%) Implemente las pruebas para el método _createEspecialidad_ del servicio de especialidad. Asegúrese de crear dos pruebas: una donde la especialidad se crea correctamente y otra donde se lanza una excepción de negocio por la violación de la regla de negocio.
 
-(5%) Cree la siguiente prueba de integración en una colección y expórtela en la carpeta _collections_ del proyecto.
-
-### Obtener todos los médicos
-
-Se espera un resultado semejante a este ejemplo:
-```
-Method: GET
-URL: http://localhost:8080/api/medicos
-Response Status: 200
-Response body:
-[{
-	"id": 1,
-	"nombre": "Juan Jose",
-	"apellido": "Rodríguez Ortiz"
-	"registroMedico": "FC3578K",
-	"especialidad": "Anestesiología"
-},
-{
-	"id": 2,
-	"nombre": "María Paula",
-	"apellido": "Sarmiento Mancipe"
-	"registroMedico": "DE7825",
-	"especialidad": "Medicina Interna"
-}]
-```
-
-
+(20%) Implemente las pruebas para el método _addEspecialidad_ del servicio de la asociación. Asegúrese de crear tres pruebas: una donde la especialidad se agrega correctamente al médico; otra donde se lanza una excepción de negocio porque el médico no existe; y otra donde se lanza una excepción porque la especidad no existe.
