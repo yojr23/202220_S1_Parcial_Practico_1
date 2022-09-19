@@ -13,7 +13,7 @@ Esta aplicación tiene el propósito de crear un sistema de información para un
 
 (10%) Cree la entidad _MedicoEntity_ en la carpeta correspondiente. Un médico tiene un nombre, un apellido, un registro médico y un id de tipo _Long_ que representa su llave primaria.
 
-(10%) Cree la entidad _EspecialidadEntity_ en la carpeta correspondiente. Una especialidad tiene un nombre, una descripción y id de tipo _Long_ que representa su llave primaria.
+(10%) Cree la entidad _EspecialidadEntity_ en la carpeta correspondiente. Una especialidad tiene un nombre, una descripción y un id de tipo _Long_ que representa su llave primaria.
 
 Tenga en cuenta que un médico puede tener varias especialiades y que una especialidad puede ser ejercida por varios médicos.
 
